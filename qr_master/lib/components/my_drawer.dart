@@ -1,4 +1,5 @@
 import 'package:qr_master/pages/generate_qr_code.dart';
+import 'package:qr_master/pages/scan_qr_code.dart';
 import 'package:qr_master/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +46,26 @@ class MyDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => GenerateQRCode(),
+                  ),
+                );
+              },
+            ),
+          ),
+          //scan qr tile
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0, top: 0),
+            child: ListTile(
+              title: const Text("S C A N Q R"),
+              leading: const Icon(Icons.qr_code),
+              onTap: () {
+                //pop drawer
+                Navigator.pop(context);
+
+                //navigate to settings page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScanQRCodePage(),
                   ),
                 );
               },

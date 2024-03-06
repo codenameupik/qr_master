@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_master/qr_image.dart';
+import 'package:qr_master/pages/qr_image.dart';
 
 class GenerateQRCode extends StatefulWidget {
   const GenerateQRCode({super.key});
