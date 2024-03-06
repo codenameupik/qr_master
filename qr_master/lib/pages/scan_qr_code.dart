@@ -35,9 +35,6 @@ class _ScanQRCodePageState extends State<ScanQRCodePage> {
         onDetect: (capture) {
           final List<Barcode> barcodes = capture.barcodes;
           final Uint8List? image = capture.image;
-          for (final barcode in barcodes) {
-            print('Barcode found! ${barcode.rawValue}');
-          }
           if (image != null) {
             showDialog(
               context: context,

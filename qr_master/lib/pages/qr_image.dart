@@ -19,7 +19,7 @@ class QRImage extends StatelessWidget {
           size: 280,
           // You can include embeddedImageStyle Property if you
           //wanna embed an image from your Asset folder
-          embeddedImageStyle: QrEmbeddedImageStyle(
+          embeddedImageStyle: const QrEmbeddedImageStyle(
             size: const Size(
               100,
               100,

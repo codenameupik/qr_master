@@ -1,6 +1,5 @@
 import 'package:qr_master/components/my_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_scanner/mobile_scanner.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +14,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(title: const Text("QR MASTER")),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
     );
   }
 }

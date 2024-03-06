@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => GenerateQRCode(),
+                    builder: (context) => const GenerateQRCode(),
                   ),
                 );
               },
@@ -65,7 +65,7 @@ class MyDrawer extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ScanQRCodePage(),
+                    builder: (context) => const ScanQRCodePage(),
                   ),
                 );
               },
@@ -85,7 +85,7 @@ class MyDrawer extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SettingsPage(),
+                    builder: (context) => const SettingsPage(),
                   ),
                 );
               },
