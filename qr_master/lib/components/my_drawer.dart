@@ -1,5 +1,4 @@
 import 'package:qr_master/pages/generate_qr_code.dart';
-import 'package:qr_master/pages/scan_qr_code.dart';
 import 'package:qr_master/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
@@ -16,18 +15,26 @@ class MyDrawer extends StatelessWidget {
           DrawerHeader(
             child: Center(
               child: Icon(
-                Icons.music_note,
+                Icons.qr_code_scanner_outlined,
                 size: 40,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
           ),
           //home tile
-          Padding(
+          /* Padding(
             padding: const EdgeInsets.only(left: 25.0, top: 25),
             child: ListTile(
               title: const Text("H O M E"),
               leading: const Icon(Icons.home),
+              onTap: () => Navigator.pop(context),
+            ),
+          ), */
+          Padding(
+            padding: const EdgeInsets.only(left: 25.0, top: 25),
+            child: ListTile(
+              title: const Text("S C A N Q R"),
+              leading: const Icon(Icons.qr_code),
               onTap: () => Navigator.pop(context),
             ),
           ),
@@ -36,7 +43,7 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 25.0, top: 0),
             child: ListTile(
               title: const Text("G E N E R A T E Q R"),
-              leading: const Icon(Icons.qr_code),
+              leading: const Icon(Icons.qr_code_2),
               onTap: () {
                 //pop drawer
                 Navigator.pop(context);
@@ -52,7 +59,7 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           //scan qr tile
-          Padding(
+          /* Padding(
             padding: const EdgeInsets.only(left: 25.0, top: 0),
             child: ListTile(
               title: const Text("S C A N Q R"),
@@ -70,7 +77,7 @@ class MyDrawer extends StatelessWidget {
                 );
               },
             ),
-          ),
+          ), */
           //setting tile
           Padding(
             padding: const EdgeInsets.only(left: 25.0, top: 0),

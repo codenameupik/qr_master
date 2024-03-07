@@ -10,6 +10,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   mobile_scanner: ^4.0.1
   pretty_qr_code: ^3.2.1
   provider: ^6.1.2
@@ -22,3 +23,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  image_path: "icons/cplzdev.png"
+  android: true
+  ios: true
+
+

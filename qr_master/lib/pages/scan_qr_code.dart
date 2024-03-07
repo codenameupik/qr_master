@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:qr_master/components/my_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:qr_master/pages/qr_scanned_result.dart';
 
 class ScanQRCodePage extends StatefulWidget {
   const ScanQRCodePage({super.key});
@@ -18,7 +19,7 @@ class _ScanQRCodePageState extends State<ScanQRCodePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Scan QR Code'),
-        actions: [
+        /* actions: [
           IconButton(
             color: Colors.grey,
             icon: ValueListenableBuilder(
@@ -59,7 +60,7 @@ class _ScanQRCodePageState extends State<ScanQRCodePage> {
               cameraController.switchCamera();
             },
           ),
-        ],
+        ], */
       ),
       drawer: const MyDrawer(),
       body: MobileScanner(
@@ -71,10 +72,16 @@ class _ScanQRCodePageState extends State<ScanQRCodePage> {
           final List<Barcode> barcodes = capture.barcodes;
           final Uint8List? image = capture.image;
           if (image != null) {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
+            //showDialog(
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: ((context) {
+                  return QRScannedResult(barcodes.first.rawValue.toString());
+                }),
+              ),
+            );
+            /* return AlertDialog(
                   title: Text(
                     barcodes.first.rawValue ?? "",
                   ),
@@ -95,12 +102,9 @@ class _ScanQRCodePageState extends State<ScanQRCodePage> {
                       child: const Text("Cancel"),
                     ),
                   ],
-                );
-              },
-            );
-            Future.delayed(const Duration(seconds: 5), () {
-              Navigator.pop(context);
-            });
+                ); */
+
+            //);
           }
         },
       ),
